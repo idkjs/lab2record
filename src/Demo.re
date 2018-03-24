@@ -1,10 +1,10 @@
 [@bs.module] external lab : Js.t({..}) = "./lab.json";
 
-/* let lab = Node.Fs.readFileAsUtf8Sync("lab.json"); */
-/* see Record Creation
+let x = lab##components;
 
-   https://bucklescript.github.io/docs/en/interop-cheatsheet.html */
-let components: Types.components = lab##components;
+let x2 = Belt.List.fromArray(x);
 
-/* Js.log(components); */
-Js.log("Hello, BuckleScript and Reason!");
+/* Js.log2("length using array length: ", Belt.Array.length(x)); */
+Js.log2("length using list length: ", Belt.List.length(x2));
+
+Js.log(x2);
