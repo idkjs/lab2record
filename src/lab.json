@@ -1,0 +1,2052 @@
+{
+  "name": "lab-portfolio-kit",
+  "library": "fela",
+  "components": [
+    {
+      "name": "Image",
+      "type": "img",
+      "props": {
+        "src": "https://c8r.imgix.net/120f3501b903b57b3b5ec654/60.jpg",
+        "w": 1
+      },
+      "style": {
+        "display": "${props.inline? 'inline': 'block'}",
+        "maxWidth": "100%"
+      },
+      "examples": [
+        "<Image mb={3} />",
+        "<Image src='https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/87be409330dcb961fa548cb6/7.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/2a32c3132c544295ba531c19/6.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/9828c73fa60db50a76e7146c/5.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/2466f8f593c33a7fed01944a/2.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/144e345e22a23dbb1c79444b/11.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/4edc08e4bc121c4ecadfca68/12.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/d0d9307256e31e890b8bf867/13.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/2621cd3d6e685b470e9b298e/14.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/c91d73af39fc0812cc14e621/15.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/11f9e385c3dc98b892c1f79f/16.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/2d22d6d08b89fb89ba41aed2/17.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/b97f1bd4082879190414455f/18.jpg?w=1920' />",
+        "<Image src='https://c8r.imgix.net/ed2e3510a8b21dd165b74efb/19.jpg?w=1920' />"
+      ],
+      "system": [],
+      "description": "Block level image. Fills parent container. Can work in Cards or Panels."
+    },
+    {
+      "name": "NavLink",
+      "type": "a",
+      "props": {
+        "fontWeight": "700",
+        "fontSize": 0,
+        "color": "inherit",
+        "ml": 4,
+        "hover": {
+          "opacity": 0.7,
+          "transition": "opacity .25s ease-in-out"
+        },
+        "active": {
+          "opacity": 0.9,
+          "transition": "opacity .25 ease-in-out"
+        }
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": "0.1em",
+        "lineHeight": "1",
+        "textDecoration": "none",
+        "display": "inline-block",
+        "whiteSpace": "nowrap",
+        "transition": "opacity .33s ease-in-out",
+        "opacity": 1
+      },
+      "examples": [
+        "<NavLink>Navigation Link</NavLink>",
+        "<NavLink>Writing</NavLink>",
+        "<NavLink>About</NavLink>",
+        "<NavLink>Contact</NavLink>",
+        "<NavLink>Store</NavLink>"
+      ],
+      "system": [
+        "fontWeight",
+        "hover",
+        "active"
+      ],
+      "keywords": [
+        "link"
+      ]
+    },
+    {
+      "name": "TextLink",
+      "type": "a",
+      "props": {
+        "hover": {
+          "opacity": 0.6,
+          "transition": "opacity .25s ease-in-out"
+        },
+        "color": "inherit"
+      },
+      "style": {
+        "textDecoration": "none",
+        "fontWeight": "${props.bold? \"600\": \"400\" }",
+        "display": "inline-block"
+      },
+      "examples": [
+        "<TextLink mr={3}>Default Text Link</TextLink>",
+        "<TextLink mr={3} bold>Bolded Text Link</TextLink>"
+      ],
+      "system": [
+        "hover"
+      ],
+      "description": "Simple link for inline text",
+      "keywords": [
+        "link"
+      ]
+    },
+    {
+      "name": "BlockLink",
+      "type": "a",
+      "props": {
+        "active": {},
+        "hover": {}
+      },
+      "style": {
+        "textDecoration": "none",
+        "display": "block"
+      },
+      "examples": [
+        "<BlockLink title=\"Example of BlockLink Component\">\n  Block link\n</BlockLink>"
+      ],
+      "system": [
+        "active",
+        "hover"
+      ],
+      "description": "Block-level link for linking groups of elements",
+      "keywords": [
+        "link"
+      ]
+    },
+    {
+      "name": "Avatar",
+      "type": "img",
+      "props": {
+        "borderRadius": 9999,
+        "borderColor": "black25",
+        "borderWidth": 1,
+        "px": 1,
+        "py": 1
+      },
+      "style": {
+        "height": "${props.size? props.size: '48px'}",
+        "width": "${props.size? props.size: '48px'}",
+        "display": "block",
+        "overflow": "hidden"
+      },
+      "examples": [
+        "<Avatar mb={2} src='https://c8r.imgix.net/2f0fcc1fb83e96acbad86ff2/dean.jpg' />",
+        "<Avatar mb={2} src='https://c8r.imgix.net/7c095c8378ddb687569fb3d4/jules.jpg' />",
+        "<Avatar mb={2} src='https://c8r.imgix.net/87760e0718677237f07e486c/timothy.jpg' size={'64px'} />",
+        "<Avatar mb={2} src='https://c8r.imgix.net/44cbd86737f04ad082a1787f/dorman.jpg' size={'96px'}/>",
+        "<Avatar mb={2} src='https://c8r.imgix.net/9782ddbddaa9e060d52d43c0/kidd.jpg' size={'128px'} />"
+      ],
+      "system": [
+        "borderRadius",
+        "borderWidth",
+        "borderColor"
+      ],
+      "description": "Basic Avatar. Adjustable size.",
+      "keywords": [
+        "avatar",
+        "user",
+        "image"
+      ]
+    },
+    {
+      "name": "PageTitle",
+      "type": "h2",
+      "props": {
+        "fontSize": [
+          4,
+          4,
+          6
+        ],
+        "fontWeight": "600",
+        "mt": 0,
+        "mb": 1,
+        "color": "inherit"
+      },
+      "style": {
+        "maxWidth": "64em",
+        "textAlign": "${props.center? 'center': 'inherit'}"
+      },
+      "examples": [
+        "<PageTitle>Page Title Example</PageTitle>",
+        "<PageTitle>Product Designer in New York</PageTitle>",
+        "<PageTitle>About the Author</PageTitle>"
+      ],
+      "system": [
+        "fontWeight"
+      ],
+      "keywords": [
+        "heading"
+      ]
+    },
+    {
+      "name": "PageSubtitle",
+      "type": "h3",
+      "props": {
+        "fontWeight": "600",
+        "fontSize": [
+          1,
+          1,
+          3
+        ],
+        "my": 0,
+        "borderColor": "transparent",
+        "color": "inherit"
+      },
+      "style": {
+        "lineHeight": "1.25",
+        "textAlign": "${props.center? 'center': 'inherit'}",
+        "textTransform": "uppercase",
+        "letterSpacing": ".075em"
+      },
+      "examples": [
+        "<PageSubtitle>A page substitle</PageSubtitle>"
+      ],
+      "system": [
+        "fontWeight",
+        "borderColor"
+      ],
+      "keywords": [
+        "heading"
+      ]
+    },
+    {
+      "name": "Card",
+      "imports": [
+        "CardLink",
+        "CardTitle",
+        "CardSubtitle",
+        "CardText",
+        "CardImage",
+        "CardKicker",
+        "Div"
+      ],
+      "jsx": "<CardLink {...props}>\n  <CardKicker children={props.kicker} />\n  <CardImage src={props.src} />\n  <Div p={[2,2,0]}>\n    <CardTitle>\n      {props.title}\n    </CardTitle>\n    <CardSubtitle>\n      {props.subtitle}\n    </CardSubtitle>\n    <CardText>{props.text}</CardText>\n  </Div>\n</CardLink>",
+      "examples": [
+        "<Card \nkicker='Featured'\nsrc='https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg'\ntitle='Card Title'\nsubtitle='Card Subtitle'\ntext=\"This is descripiton text about the card, it can be several lines long.\"\n\n/>"
+      ],
+      "system": [],
+      "description": "Entire card is a click target. Can be used to preview sites, pages, or articles. "
+    },
+    {
+      "name": "CardImage",
+      "type": "img",
+      "props": {
+        "borderRadius": 0,
+        "w": 1,
+        "src": "https://c8r.imgix.net/93b9a502bbf0c9ea5247d5a1/59.jpg"
+      },
+      "style": {
+        "display": "block"
+      },
+      "examples": [
+        "<CardImage />"
+      ],
+      "system": [
+        "borderRadius",
+        "borderWidth"
+      ],
+      "description": "Image for Card component. Full width of card container and set to display block.",
+      "keywords": [
+        "card",
+        "image"
+      ]
+    },
+    {
+      "name": "CardTitle",
+      "type": "h3",
+      "props": {
+        "fontWeight": "600",
+        "fontSize": [
+          2,
+          3,
+          3
+        ],
+        "mt": 2,
+        "mb": 1,
+        "borderColor": "transparent"
+      },
+      "style": {
+        "lineHeight": "1.25"
+      },
+      "examples": [
+        "<CardTitle>Card Title</CardTitle>"
+      ],
+      "system": [
+        "fontWeight",
+        "borderColor"
+      ],
+      "description": ""
+    },
+    {
+      "name": "CardSubtitle",
+      "type": "h4",
+      "props": {
+        "fontSize": 0,
+        "mt": 0,
+        "mb": 2,
+        "fontWeight": "500",
+        "borderColor": "transparent",
+        "color": "inherit"
+      },
+      "style": {
+        "lineHeight": "1.5",
+        "textTransform": "uppercase",
+        "letterSpacing": "0.075em",
+        "opacity": 0.75
+      },
+      "examples": [
+        "<CardSubtitle>Card Subtitle</CardSubtitle>"
+      ],
+      "system": [
+        "fontWeight",
+        "borderColor"
+      ]
+    },
+    {
+      "name": "CardText",
+      "type": "p",
+      "props": {
+        "fontWeight": "400",
+        "mt": 0,
+        "color": "inherit"
+      },
+      "style": {
+        "maxWidth": "${props.wide? '34em': '30'",
+        "lineHeight": "1.5"
+      },
+      "examples": [
+        "<CardText>Card text example</CardText>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "CardKicker",
+      "type": "h5",
+      "props": {
+        "fontWeight": "500",
+        "fontSize": 0,
+        "color": "inherit",
+        "mt": 0,
+        "mb": 2
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "opacity": 0.66,
+        "letterSpacing": ".075em"
+      },
+      "examples": [
+        "<CardKicker>Card Kicker</CardKicker>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "CardLink",
+      "type": "a",
+      "props": {
+        "color": "black",
+        "hover": {
+          "transform": "scale(1.02)",
+          "transition": "transform .25s ease-in-out"
+        }
+      },
+      "style": {
+        "display": "block",
+        "transform": "scale(1)",
+        "transition": "transform .4s ease-in-out"
+      },
+      "examples": [
+        "<CardLink>Card Link. Interaction design for cards. </CardLink>"
+      ],
+      "system": [
+        "hover"
+      ],
+      "keywords": [
+        "link"
+      ],
+      "description": "Wrapper for entire Card component. Can add borders, spacing, boxShadow, and customize interaction styles."
+    },
+    {
+      "name": "Container",
+      "type": "div",
+      "props": {
+        "mx": "auto"
+      },
+      "style": {
+        "maxWidth": "64em",
+        "textAlign": "${props.center? 'center': 'left'}"
+      },
+      "examples": [
+        "<Container bg='blue' p={4}>Site container for centering content.</Container>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Svg",
+      "type": "svg",
+      "props": {
+        "viewBox": "0 0 24 24",
+        "height": 32,
+        "width": 32,
+        "fill": "currentColor",
+        "mx": 2
+      },
+      "style": {
+        "display": "${props.display? props.display: 'block'}"
+      },
+      "examples": [
+        "<Svg>\n<path d=\"M15.386.524c-4.764 0-8.64 3.876-8.64 8.64 0 4.75 3.876 8.613 8.64 8.613 4.75 0 8.614-3.864 8.614-8.613C24 4.4 20.136.524 15.386.524M.003 23.537h4.22V.524H.003\"></path>\n\n</Svg>"
+      ],
+      "system": []
+    },
+    {
+      "name": "DribbbleIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n<Svg>\n<path d=\"M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z\"></path>\n</Svg>\n</IconLink>",
+      "examples": [
+        "<DribbbleIcon mb={4} />",
+        "<DribbbleIcon color='#EA4C89' />"
+      ],
+      "system": []
+    },
+    {
+      "name": "TwitterIcon",
+      "imports": [
+        "IconLink",
+        "Svg"
+      ],
+      "jsx": "<IconLink fontSize={0} {...props}>\n  <Svg {...props}>\n    <title>Twitter</title>\n    <path d=\"M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<TwitterIcon />"
+      ],
+      "system": []
+    },
+    {
+      "name": "GitHubIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n    <path d=\"M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<GitHubIcon />"
+      ]
+    },
+    {
+      "name": "FacebookIcon",
+      "imports": [
+        "IconLink",
+        "Svg"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n    <path d=\"M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<FacebookIcon />"
+      ],
+      "system": []
+    },
+    {
+      "name": "InstagramIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n<Svg>\n  <path d=\"M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z\"></path>\n</Svg>\n</IconLink>",
+      "examples": [
+        "<InstagramIcon />"
+      ]
+    },
+    {
+      "name": "PinterestIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n    <path d=\"M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<PinterestIcon />"
+      ]
+    },
+    {
+      "name": "YoutubeIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n<Svg>\n<path class=\"a\" d=\"M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z\"></path>\n</Svg>\n</IconLink>",
+      "examples": [
+        "<YoutubeIcon />"
+      ]
+    },
+    {
+      "name": "CodepenIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n<Svg>\n<path d=\"M24 8.182l-.018-.087-.017-.05c-.01-.024-.018-.05-.03-.075-.003-.018-.015-.034-.02-.05l-.035-.067-.03-.05-.044-.06-.046-.045-.06-.045-.046-.03-.06-.044-.044-.04-.015-.02L12.58.19c-.347-.232-.796-.232-1.142 0L.453 7.502l-.015.015-.044.035-.06.05-.038.04-.05.056-.037.045-.05.06c-.02.017-.03.03-.03.046l-.05.06-.02.06c-.02.01-.02.04-.03.07l-.01.05C0 8.12 0 8.15 0 8.18v7.497c0 .044.003.09.01.135l.01.046c.005.03.01.06.02.086l.015.05c.01.027.016.053.027.075l.022.05c0 .01.015.04.03.06l.03.04c.015.01.03.04.045.06l.03.04.04.04c.01.013.01.03.03.03l.06.042.04.03.01.014 10.97 7.33c.164.12.375.163.57.163s.39-.06.57-.18l10.99-7.28.014-.01.046-.037.06-.043.048-.036.052-.058.033-.045.04-.06.03-.05.03-.07.016-.052.03-.077.015-.045.03-.08v-7.5c0-.05 0-.095-.016-.14l-.014-.045.044.003zm-11.99 6.28l-3.65-2.44 3.65-2.442 3.65 2.44-3.65 2.44zm-1.034-6.674l-4.473 2.99L2.89 8.362l8.086-5.39V7.79zm-6.33 4.233l-2.582 1.73V10.3l2.582 1.726zm1.857 1.25l4.473 2.99v4.82L2.89 15.69l3.618-2.417v-.004zm6.537 2.99l4.474-2.98 3.613 2.42-8.087 5.39v-4.82zm6.33-4.23l2.583-1.72v3.456l-2.583-1.73zm-1.855-1.24L13.042 7.8V2.97l8.085 5.39-3.612 2.415v.003z\"></path>\n</Svg>\n</IconLink>",
+      "examples": [
+        "<CodepenIcon />"
+      ],
+      "system": []
+    },
+    {
+      "name": "VimeoIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n<Svg>\n  <path d=\"M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z\"></path>\n</Svg>\n</IconLink>",
+      "examples": [
+        "<VimeoIcon />"
+      ]
+    },
+    {
+      "name": "SnapchatIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n    <path d=\"M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<SnapchatIcon />"
+      ],
+      "description": "Snapchat yellow is #fffc00",
+      "system": []
+    },
+    {
+      "name": "BehanceIcon",
+      "imports": [
+        "IconLink",
+        "Svg"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n   <path d=\"M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.348-1.05.6-1.67.767-.61.165-1.252.254-1.91.254H0V4.51h6.938v-.007zM16.94 16.665c.44.428 1.073.643 1.894.643.59 0 1.1-.148 1.53-.447.424-.29.68-.61.78-.94h2.588c-.403 1.28-1.048 2.2-1.9 2.75-.85.56-1.884.83-3.08.83-.837 0-1.584-.13-2.272-.4-.673-.27-1.24-.65-1.72-1.14-.464-.49-.823-1.08-1.077-1.77-.253-.69-.373-1.45-.373-2.27 0-.803.135-1.54.403-2.23.27-.7.644-1.28 1.12-1.79.495-.51 1.063-.895 1.736-1.194s1.4-.433 2.22-.433c.91 0 1.69.164 2.38.523.67.34 1.22.82 1.66 1.4.44.586.75 1.26.94 2.02.19.75.25 1.54.21 2.38h-7.69c0 .84.28 1.632.71 2.065l-.08.03zm-10.24.05c.317 0 .62-.03.906-.093.29-.06.548-.165.763-.3.21-.135.39-.328.52-.583.13-.24.19-.57.19-.96 0-.75-.22-1.29-.64-1.62-.43-.32-.99-.48-1.69-.48H3.24v4.05H6.7v-.03zm13.607-5.65c-.352-.385-.94-.592-1.657-.592-.468 0-.855.074-1.166.238-.302.15-.55.35-.74.59-.19.24-.317.48-.392.75-.075.26-.12.5-.135.71h4.762c-.07-.75-.33-1.3-.68-1.69v.01zM6.52 10.45c.574 0 1.05-.134 1.425-.412.374-.27.554-.72.554-1.338 0-.344-.07-.625-.18-.846-.13-.22-.3-.39-.5-.512-.21-.124-.45-.21-.72-.257-.27-.053-.56-.074-.84-.074H3.23v3.44h3.29zm9.098-4.958h5.968v1.454h-5.968V5.48v.01z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<BehanceIcon />"
+      ],
+      "system": []
+    },
+    {
+      "name": "EtsyIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n   <path d=\"M8.564 2.445c0-.325.033-.52.59-.52h7.465c1.3 0 2.02 1.11 2.54 3.193l.42 1.666h1.27c.23-4.728.43-6.784.43-6.784s-3.196.36-5.09.36H6.64L1.526.196v1.37l1.725.326c1.21.24 1.5.496 1.6 1.606 0 0 .11 3.27.11 8.64 0 5.385-.09 8.61-.09 8.61 0 .973-.39 1.333-1.59 1.573l-1.722.33V24l5.13-.165h8.55c1.935 0 6.39.165 6.39.165.105-1.17.75-6.48.855-7.064h-1.2L20 19.846c-1.005 2.28-2.476 2.445-4.11 2.445h-4.906c-1.63 0-2.415-.64-2.415-2.05V12.8s3.62 0 4.79.096c.912.064 1.463.325 1.76 1.598l.39 1.695h1.41l-.09-4.278.192-4.305H15.63l-.45 1.89c-.283 1.244-.48 1.47-1.754 1.6-1.666.17-4.815.14-4.815.14V2.45h-.05z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<EtsyIcon />"
+      ]
+    },
+    {
+      "name": "KickstarterIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n <path d=\"M9.604 8.18l4.4-6.38C14.838.6 15.91 0 17.231 0c1.072 0 2.002.381 2.789 1.144.783.765 1.176 1.675 1.176 2.738 0 .784-.207 1.479-.624 2.079l-3.967 5.769 4.853 6.153c.484.612.727 1.33.727 2.15 0 1.086-.381 2.018-1.145 2.798-.762.779-1.686 1.169-2.771 1.169-1.189 0-2.097-.387-2.721-1.16l-5.943-7.417v4.089c0 1.168-.202 2.074-.607 2.722C8.261 23.411 7.195 24 5.785 24c-1.282 0-2.276-.436-2.979-1.299-.66-.799-.99-1.856-.99-3.172V4.365c0-1.245.336-2.274 1.004-3.083C3.518.428 4.488 0 5.726 0c1.179 0 2.16.428 2.946 1.282.438.475.715.953.831 1.44.07.3.105.858.105 1.68V8.18h-.004z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<KickstarterIcon />"
+      ],
+      "system": []
+    },
+    {
+      "name": "ProducthuntIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n   <path d=\"M13.604 8.4h-3.405V12h3.405c.995 0 1.801-.806 1.801-1.801 0-.993-.805-1.799-1.801-1.799z\"></path>\n   <path d=\"M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm1.604 14.4h-3.405V18H7.801V6h5.804c2.319 0 4.2 1.88 4.2 4.199 0 2.321-1.881 4.201-4.201 4.201z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<ProducthuntIcon />"
+      ]
+    },
+    {
+      "name": "StackoverflowIcon",
+      "imports": [
+        "IconLink",
+        "Svg"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n <path d=\"M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.936v.014zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.35 1.617-.01.001zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0h.002z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<StackoverflowIcon />"
+      ]
+    },
+    {
+      "name": "SlackIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n   <path d=\"M9.879 10.995l1.035 3.085 3.205-1.074-1.035-3.074-3.205 1.08v-.017z\"></path>\n   <path d=\"M18.824 14.055l-1.555.521.54 1.61c.218.65-.135 1.355-.786 1.574-.15.045-.285.067-.435.063-.511-.015-.976-.338-1.155-.849l-.54-1.607-3.21 1.073.539 1.608c.211.652-.135 1.358-.794 1.575-.15.048-.285.067-.435.064-.51-.015-.976-.34-1.156-.85l-.539-1.619-1.561.524c-.15.045-.285.061-.435.061-.511-.016-.976-.345-1.155-.855-.225-.66.135-1.364.78-1.575l1.56-.525L7.5 11.76l-1.551.525c-.141.048-.285.066-.428.064-.495-.016-.975-.338-1.141-.848-.209-.65.135-1.354.796-1.574l1.56-.52-.54-1.605c-.21-.654.136-1.359.796-1.575.659-.22 1.363.136 1.574.783l.539 1.608L12.3 7.544l-.54-1.605c-.209-.645.135-1.35.789-1.574.652-.211 1.359.135 1.575.791l.54 1.621 1.555-.51c.651-.219 1.356.135 1.575.779.218.654-.135 1.359-.784 1.575l-1.557.524 1.035 3.086 1.551-.516c.652-.211 1.358.135 1.575.795.22.66-.135 1.365-.779 1.574l-.011-.029zm4.171-5.356C20.52.456 16.946-1.471 8.699 1.005.456 3.479-1.471 7.051 1.005 15.301c2.475 8.245 6.046 10.17 14.296 7.694 8.245-2.475 10.17-6.046 7.694-14.296z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<SlackIcon />"
+      ]
+    },
+    {
+      "name": "NpmIcon",
+      "imports": [
+        "IconLink",
+        "Svg"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n   <path d=\"M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331z\"></path>\n   <path d=\"M10.665 10H12v2.667h-1.335V10z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<NpmIcon />"
+      ]
+    },
+    {
+      "name": "SoundcloudIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n    <path d=\"M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c0-.057-.045-.1-.09-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.09.094s.089-.045.104-.104l.21-1.319-.21-1.334c0-.061-.044-.09-.09-.09m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.12.119.12.061 0 .105-.061.121-.12l.254-2.474-.254-2.548c-.016-.06-.061-.12-.121-.12m.945-.089c-.075 0-.135.06-.15.135l-.193 2.64.21 2.544c.016.077.075.138.149.138.075 0 .135-.061.15-.15l.24-2.532-.24-2.623c0-.075-.06-.135-.135-.135l-.031-.017zm1.155.36c-.005-.09-.075-.149-.159-.149-.09 0-.158.06-.164.149l-.217 2.43.2 2.563c0 .09.075.157.159.157.074 0 .148-.068.148-.158l.227-2.563-.227-2.444.033.015zm.809-1.709c-.101 0-.18.09-.18.181l-.21 3.957.187 2.563c0 .09.08.164.18.164.094 0 .174-.09.18-.18l.209-2.563-.209-3.972c-.008-.104-.088-.18-.18-.18m.959-.914c-.105 0-.195.09-.203.194l-.18 4.872.165 2.548c0 .12.09.209.195.209.104 0 .194-.089.21-.209l.193-2.548-.192-4.856c-.016-.12-.105-.21-.21-.21m.989-.449c-.121 0-.211.089-.225.209l-.165 5.275.165 2.52c.014.119.104.225.225.225.119 0 .225-.105.225-.225l.195-2.52-.196-5.275c0-.12-.105-.225-.225-.225m1.245.045c0-.135-.105-.24-.24-.24-.119 0-.24.105-.24.24l-.149 5.441.149 2.503c.016.135.121.24.256.24s.24-.105.24-.24l.164-2.503-.164-5.456-.016.015zm.749-.134c-.135 0-.255.119-.255.254l-.15 5.322.15 2.473c0 .15.12.255.255.255s.255-.12.255-.27l.15-2.474-.165-5.307c0-.148-.12-.27-.271-.27m1.005.166c-.164 0-.284.135-.284.285l-.103 5.143.135 2.474c0 .149.119.277.284.277.149 0 .271-.12.284-.285l.121-2.443-.135-5.112c-.012-.164-.135-.285-.285-.285m1.184-.945c-.045-.029-.105-.044-.165-.044s-.119.015-.165.044c-.09.054-.149.15-.149.255v.061l-.104 6.048.115 2.449v.008c.008.06.03.135.074.18.058.061.142.104.234.104.08 0 .158-.044.209-.09.058-.06.091-.135.091-.225l.015-.24.117-2.203-.135-6.086c0-.104-.061-.193-.135-.239l-.002-.022zm1.006-.547c-.045-.045-.09-.061-.15-.061-.074 0-.149.016-.209.061-.075.061-.119.15-.119.24v.029l-.137 6.609.076 1.215.061 1.185c0 .164.148.314.328.314.181 0 .33-.15.33-.329l.15-2.414-.15-6.637c0-.12-.074-.221-.165-.277m8.934 3.777c-.405 0-.795.086-1.139.232-.24-2.654-2.46-4.736-5.188-4.736-.659 0-1.305.135-1.889.359-.225.09-.27.18-.285.359v9.368c.016.18.15.33.33.345h8.185C22.681 17.218 24 15.914 24 14.28s-1.319-2.952-2.938-2.952\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<SoundcloudIcon />"
+      ]
+    },
+    {
+      "name": "LinkedinIcon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n   <path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"></path>\n  </Svg>\n</IconLink>",
+      "examples": [
+        "<LinkedinIcon />"
+      ],
+      "description": "Brand color is #0077b5",
+      "system": []
+    },
+    {
+      "name": "IconLink",
+      "type": "a",
+      "props": {
+        "hover": {
+          "opacity": ".64",
+          "transition": "opacity .25s ease-in-out"
+        },
+        "fontWeight": "600",
+        "color": "inherit"
+      },
+      "style": {
+        "textDecoration": "none",
+        "transition": "opacity .25s ease-in-out",
+        "opacity": 1,
+        "display": "inline-block"
+      },
+      "examples": [
+        "<IconLink>Icon Link</IconLink>"
+      ],
+      "system": [
+        "hover",
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "Panel",
+      "imports": [
+        "PanelTitle",
+        "PanelSubtitle",
+        "PanelText",
+        "PanelImage",
+        "PanelLink",
+        "Flexbox",
+        "Div",
+        "PanelKicker"
+      ],
+      "jsx": "<Flexbox {...props} wrap>\n<Div w={[1,3/5]} pr={3}>\n  <PanelImage src={props.image} />\n  </Div>\n  <Div w={[1,2/5]} pl={[0,3]}>\n  <PanelKicker children={props.kicker} />\n  <PanelTitle children={props.title} />\n  <PanelSubtitle children={props.subtitle} />\n  <PanelText children={props.text} />\n  {props.linkText &&\n  <PanelLink href={props.href} children={props.linkText} />\n  }\n  </Div>\n</Flexbox>",
+      "examples": [
+        "<Panel kicker='Featured' title=\"Panel Title\" subtitle=\"Panel subtitle\" \ntext=\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectok.\"\nlinkText='Read More'\nimage='https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg'/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "PanelAlt",
+      "imports": [
+        "Flexbox",
+        "Div",
+        "PanelImage",
+        "PanelTitle",
+        "PanelSubtitle",
+        "PanelText",
+        "PanelLink"
+      ],
+      "jsx": "<Flexbox {...props} wrap>\n\n  <Div w={[1,2/5]}>\n  <PanelTitle children={props.title} />\n  <PanelSubtitle children={props.subtitle} />\n  <PanelText children={props.text} />\n  {props.linkText && \n    <PanelLink href={props.href} children={props.linkText} />\n  }\n  </Div>\n  <Div w={[1,3/5]} pl={[0,3,5]}>\n  <PanelImage mt={[3,0]} src={props.image} />\n  </Div>\n</Flexbox>",
+      "examples": [
+        "<PanelAlt title=\"Panel Title\" subtitle=\"Panel subtitle\" \ntext=\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectok.\"\nlinkText='Read More'\nimage='https://c8r.imgix.net/120f3501b903b57b3b5ec654/60.jpg'/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "PanelTitle",
+      "type": "h2",
+      "props": {
+        "my": 0,
+        "fontWeight": "600",
+        "color": "inherit",
+        "fontSize": [
+          3,
+          4
+        ]
+      },
+      "style": {
+        "lineHeight": "1.25"
+      },
+      "examples": [
+        "<PanelTitle>Panel Title</PanelTitle>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "PanelSubtitle",
+      "type": "h3",
+      "props": {
+        "my": 0,
+        "fontWeight": "500",
+        "color": "inherit",
+        "fontSize": [
+          1,
+          2
+        ]
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": "0.1em"
+      },
+      "examples": [
+        "<PanelSubtitle>Example of a Panel subtitle</PanelSubtitle>"
+      ],
+      "system": [
+        "fontWeight"
+      ],
+      "keywords": [
+        "panel",
+        "subtitle"
+      ]
+    },
+    {
+      "name": "PanelKicker",
+      "type": "h5",
+      "props": {
+        "mt": 0,
+        "mb": 1,
+        "fontSize": 0,
+        "fontWeight": "600"
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": "0.075em"
+      },
+      "examples": [
+        "<PanelKicker>June 2017</PanelKicker>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "PanelText",
+      "type": "p",
+      "props": {
+        "color": "inherit"
+      },
+      "style": {
+        "lineHeight": "1.5"
+      },
+      "examples": [
+        "<PanelText>An example of some panel text</PanelText>"
+      ],
+      "system": []
+    },
+    {
+      "name": "PanelImage",
+      "type": "img",
+      "props": {
+        "w": 1,
+        "src": "https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg"
+      },
+      "style": {
+        "maxWidth": "100%",
+        "display": "block"
+      },
+      "examples": [
+        "<PanelImage />"
+      ],
+      "system": [
+        "borderRadius",
+        "borderWidth",
+        "borderColor"
+      ],
+      "keywords": [
+        "panel"
+      ]
+    },
+    {
+      "name": "PanelLink",
+      "type": "a",
+      "props": {
+        "bg": "blue",
+        "color": "white",
+        "py": 2,
+        "fontSize": 0,
+        "borderRadius": 3,
+        "px": 3
+      },
+      "style": {
+        "display": "inline-block",
+        "lineHeight": "1",
+        "whiteSpace": "nowrap"
+      },
+      "examples": [
+        "<PanelLink>Hello</PanelLink>"
+      ],
+      "system": [
+        "borderRadius"
+      ]
+    },
+    {
+      "name": "Flexbox",
+      "type": "div",
+      "props": {},
+      "style": {
+        "display": "flex",
+        "flexWrap": "${props.wrap? 'wrap':'nowrap'}",
+        "alignItems": "${props.top? 'flex-start': 'center'}",
+        "justifyContent": "space-between"
+      },
+      "examples": [
+        "<Flexbox mb={4} bg='lightgray' p={4}>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n</Flexbox>",
+        "<Flexbox mb={4} bg='lightgray' p={4}>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '50%', padding: 16 }}></div>\n</Flexbox>",
+        "<Flexbox mb={4} bg='lightgray' p={4}>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)', width: '33.3333%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '33.3333%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '33.3333%', padding: 16 }}></div>\n</Flexbox>",
+        "<Flexbox mb={4} bg='lightgray' p={4}>\n  <div style={{ outline: '1px solid rgba(255,255,255,.75)', width: '25%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '25%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '25%', padding: 16 }}></div>\n  <div  style={{ outline: '1px solid rgba(255,255,255,.75)',width: '25%', padding: 16 }}></div>\n</Flexbox>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Text",
+      "type": "p",
+      "props": {
+        "fontSize": 3
+      },
+      "style": {
+        "textAlign": "${props.center? 'center': 'inherit'}",
+        "maxWidth": "${props.wide? '30em': '28em'}",
+        "lineHeight": "1.5"
+      },
+      "examples": [
+        "<Text>For NASA, space is still a high priority.</Text>"
+      ],
+      "system": [
+        "fontWeight",
+        "focus"
+      ]
+    },
+    {
+      "name": "SectionTitle",
+      "type": "h4",
+      "props": {
+        "fontWeight": "500",
+        "borderWidth": 1,
+        "borderBottom": true,
+        "borderColor": "black25",
+        "color": "inherit",
+        "pb": 1
+      },
+      "style": {},
+      "examples": [
+        "<SectionTitle>Hello</SectionTitle>"
+      ],
+      "system": [
+        "fontWeight",
+        "borderWidth",
+        "borderColor"
+      ],
+      "keywords": [
+        "heading"
+      ]
+    },
+    {
+      "name": "Div",
+      "type": "div",
+      "props": {
+        "bg": "transparent"
+      },
+      "style": {},
+      "examples": [
+        "<Div>Hello</Div>"
+      ],
+      "system": [],
+      "description": "Generic Div for diving content and adding styles"
+    },
+    {
+      "name": "Caps",
+      "type": "span",
+      "props": {},
+      "style": {
+        "letterSpacing": "0.1em",
+        "textTransform": "uppercase"
+      },
+      "examples": [
+        "<Caps>Hello</Caps>"
+      ],
+      "keywords": [
+        "typography"
+      ],
+      "system": []
+    },
+    {
+      "name": "Capitalize",
+      "type": "span",
+      "props": {},
+      "style": {
+        "textTransform": "capitalize"
+      },
+      "examples": [
+        "<Capitalize>Hello</Capitalize>"
+      ],
+      "system": []
+    },
+    {
+      "name": "PageBG",
+      "type": "div",
+      "props": {
+        "w": "100vw",
+        "image": "https://c8r.imgix.net/f8da22397269de121c3e900e/67.jpg"
+      },
+      "style": {
+        "height": "${props.half? '50vh': '100vh'}",
+        "backgroundRepeat": "no-repeat",
+        "backgroundPosition": "center center",
+        "backgroundImage": "url(${props.image})",
+        "backgroundSize": "cover"
+      },
+      "examples": [
+        "<PageBG half>Hello</PageBG>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Center",
+      "type": "div",
+      "props": {},
+      "style": {
+        "textAlign": "center"
+      },
+      "examples": [
+        "<Center>Centers text and inline-block elements</Center>"
+      ],
+      "system": []
+    },
+    {
+      "name": "SiteHeader",
+      "imports": [
+        "NavLink",
+        "Avatar",
+        "Flexbox",
+        "Div",
+        "BlockLink"
+      ],
+      "jsx": "<header>\n<Flexbox>\n  <BlockLink href=\"/\">\n    <Avatar src={props.src} />\n  </BlockLink>\n  <Div ml='auto'>\n  {(props.links || []).map(link => (\n    <NavLink href={link.href} >{link.text}</NavLink>\n  ))}\n  </Div>\n  </Flexbox>\n</header>",
+      "examples": [
+        "<SiteHeader \nsrc='https://c8r.imgix.net/87760e0718677237f07e486c/timothy.jpg'\nlinks={[\n  {\n    href: '#0', \n    text: 'Writing' \n  },\n  {\n    href: '#0', \n    text: 'Work' \n  },\n  {\n    href: '#0', \n    text: 'projects' \n  },\n  {\n    href: '#0', \n    text: 'Case Studies' \n  },\n   {\n    href: '#0', \n    text: 'hi@email.com' \n  },\n    ]} />"
+      ],
+      "system": []
+    },
+    {
+      "name": "HorizontalRule",
+      "type": "hr",
+      "props": {
+        "borderWidth": 1,
+        "borderTop": true,
+        "borderColor": "currentColor",
+        "my": 0
+      },
+      "style": {},
+      "examples": [
+        "<HorizontalRule />"
+      ],
+      "system": [
+        "borderWidth",
+        "borderColor"
+      ]
+    },
+    {
+      "name": "Tile",
+      "imports": [
+        "TileTitle",
+        "TileSubtitle",
+        "TileLink",
+        "TileText",
+        "TileImage",
+        "Div",
+        "TileKicker",
+        "Flexbox"
+      ],
+      "jsx": "<TileLink {...props}>\n  <TileImage src={props.src}>\n  <Flexbox p={4} wrap style={{ alignContent: 'flex-end', height: '100%' }}>\n\n  <TileKicker w={1} children={props.kicker} />\n    <TileTitle w={1} children={props.title} />\n    <TileSubtitle w={1} children={props.subtitle} />\n    \n    <TileText w={1} children={props.text} />\n    \n    </Flexbox>\n  </TileImage>\n</TileLink>",
+      "examples": [
+        "<Tile \ncolor='white'\nsrc='https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg' \ntitle='This is text for a title.'\nkicker=\"27 May 2015\"\nsubtitle='By: Akil Johnson'\ntext='This is a bunch of potential text for the tile. Could be very long or very short.'\n/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "TileLink",
+      "type": "a",
+      "props": {
+        "w": 1,
+        "hover": {
+          "cursor": "pointer",
+          "opacity": 0.5,
+          "transition": "opacity .25s ease-in-out"
+        }
+      },
+      "style": {
+        "opacity": 1,
+        "transition": "opacity .25s ease-in-out",
+        "display": "block",
+        "height": 0,
+        "position": "relative",
+        "paddingBottom": "66.66%"
+      },
+      "examples": [
+        "<TileLink> </TileLink>"
+      ],
+      "system": [
+        "hover"
+      ],
+      "description": "Wraps Tile component. Add interactions and animations here."
+    },
+    {
+      "name": "TileTitle",
+      "type": "h3",
+      "props": {
+        "mt": 0,
+        "mb": 1,
+        "fontSize": [
+          3,
+          4
+        ],
+        "fontWeight": "600"
+      },
+      "style": {
+        "lineHeight": "1"
+      },
+      "examples": [
+        "<TileTitle>Tile Title Example</TileTitle>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "TileSubtitle",
+      "type": "h4",
+      "props": {
+        "mt": 0,
+        "mb": 1,
+        "fontSize": [
+          0,
+          1
+        ],
+        "fontWeight": "600"
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": ".075em"
+      },
+      "examples": [
+        "<TileSubtitle>A Tile Subtitle</TileSubtitle>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "TileKicker",
+      "type": "h5",
+      "props": {
+        "mt": 0,
+        "mb": 1,
+        "fontSize": 0,
+        "fontWeight": "600"
+      },
+      "style": {
+        "textTransform": "uppercase",
+        "letterSpacing": "0.075em",
+        "alignItems": "top"
+      },
+      "examples": [
+        "<TileKicker>Jun 2017</TileKicker>",
+        "<TileKicker>BY: Author Name</TileKicker>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "TileText",
+      "type": "Text",
+      "props": {
+        "fontSize": [
+          0,
+          1
+        ],
+        "my": 0
+      },
+      "style": {
+        "lineHeight": "1.5"
+      },
+      "examples": [
+        "<TileText children='A bunch of description text' />"
+      ],
+      "system": []
+    },
+    {
+      "name": "TileImage",
+      "type": "div",
+      "props": {
+        "w": 1,
+        "src": "https://c8r.imgix.net/83b8be0c783f4adc7ed73918/58.jpg"
+      },
+      "style": {
+        "position": "absolute",
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "zIndex": 100,
+        "height": "100%",
+        "backgroundImage": "url(${props.src})",
+        "backgroundPosition": "center center",
+        "backgroundSize": "cover"
+      },
+      "examples": [
+        "<TileImage>Hello</TileImage>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Meta",
+      "type": "p",
+      "props": {
+        "color": "gray",
+        "fontSize": 1
+      },
+      "style": {
+        "lineHeight": "1.25"
+      },
+      "examples": [
+        "<Meta>Meta text. For legal text. Secondary descriptions.</Meta>"
+      ],
+      "system": [],
+      "description": "Meta text. For legal text. Secondary descriptions."
+    },
+    {
+      "name": "List",
+      "type": "ul",
+      "props": {
+        "my": 0,
+        "pl": 0
+      },
+      "style": {
+        "listStyleType": "none",
+        "display": "${props.display? props.display: 'flex'}",
+        "flexWrap": "wrap"
+      },
+      "examples": [
+        "<List></List>"
+      ],
+      "system": []
+    },
+    {
+      "name": "ListItem",
+      "type": "li",
+      "props": {
+        "w": 1
+      },
+      "style": {},
+      "examples": [
+        "<ListItem></ListItem>"
+      ],
+      "system": [],
+      "description": "List Item wrapper for links"
+    },
+    {
+      "name": "ListItemLink",
+      "type": "a",
+      "props": {
+        "w": 1,
+        "fontWeight": "600",
+        "py": 2,
+        "hover": {
+          "color": "#0070cc"
+        },
+        "color": "inherit",
+        "fontSize": 4,
+        "borderWidth": 1,
+        "borderBottom": true,
+        "borderColor": "inherit"
+      },
+      "style": {
+        "textDecoration": "none",
+        "textDecorationSkipInk": "auto",
+        "display": "block"
+      },
+      "examples": [
+        "<ListItemLink>List Item Link</ListItemLink>"
+      ],
+      "system": [
+        "fontWeight",
+        "hover",
+        "borderWidth",
+        "borderColor"
+      ]
+    },
+    {
+      "name": "LinkList",
+      "imports": [
+        "List",
+        "ListItem",
+        "TextLink"
+      ],
+      "jsx": "<List {...props}>\n  {(props.links || []).map((link, index) => (\n    <ListItem key={index} w={[ 1, 1/2, 1/3 ]}><TextLink fontSize={3} py={2} href={link.href} bold='true'>{link.text}</TextLink></ListItem>\n  ))}\n</List>",
+      "examples": [
+        "<LinkList />"
+      ],
+      "system": []
+    },
+    {
+      "name": "Papercraft",
+      "imports": [
+        "Svg"
+      ],
+      "jsx": "<Svg color='rgba(0,0,0,.2)' width='64' height='64' display='inline-block' viewBox='0 0 32 32' {...props}>\n  {props.children == 'a' &&\n  <g>\n    <path d=\" M16 0 L32 32 L0 32 Z\"></path>\n    <path fill='#eee' d=\" M16 0 L20 24 L0 32 Z\"></path>\n  </g>\n  }\n  {props.children == 'b' &&\n  <g>\n    <path fill='' d=\"M0 0 L16 0 L32 18 L26 32 L0 32 Z\"></path>\n    <path fill='#eee' d=\"M0 0 L26 0 L32 6 L0 32 Z\"></path>\n  </g> \n  }\n  {props.children == 'c' &&\n  <g>\n    <path d=\"M0 0 L28 0 L0 32 Z\"></path>\n    <path fill='#eee' d=\"M0 0 L30 0 L32 8 Z M0 8 L32 32 L0 32 Z\"></path>\n  </g>\n  }\n  {props.children == 'd' &&\n  <g>\n    <path d=\"M0 0 L16 0 L32 18 L28 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L22 26 L0 32 Z\"/>\n  </g>\n  }\n  {props.children == 'e' &&\n  <g>\n    <path d=\"M0 0 L16 0 L32 16 L24 24 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L0 32 Z\"/>\n  </g>\n  }\n  {props.children == 'f' &&\n  <g>\n    <path d=\"M0 0 L16 0 L32 16 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'g' &&\n  <g>\n    <path d=\"M0 0 L28 0 L0 32 Z M0 32 L32 16 L32 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L30 0 L32 8 Z M0 8 L32 32 L0 32 Z\"/>\n  </g>\n  }\n  {props.children == 'h' &&\n  <g>\n    <path d=\"M0 0 L6 0 L12 32 L0 32 Z M20 0 L32 0 L32 32 L22 32 Z\"/>\n    <path fill='#eee' d=\"M32 0 L32 20 L0 32 L0 12 Z\"/>\n  </g>\n  }\n  {props.children == 'i' &&\n  <path fill='#eee' d=\"M10 0 L22 0 L22 32 L10 32 Z\"/>\n  }\n  {props.children == 'j' &&\n  <g>\n    <path d=\"M20 0 L32 0 L32 32 L16 32 Z\"/>\n    <path fill='#eee' d=\"M0 24 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'k' &&\n  <g>\n    <path d=\"M0 0 L32 0 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'l' &&\n  <g>\n    <path d=\"M0 0 L14 0 L16 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 32 L4 20 L32 26 L32 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'm' &&\n  <g>\n    <path d=\"M32 0 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'n' &&\n  <g>\n    <path d=\"M20 0 L32 0 L32 32 L16 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'o' &&\n  <g>\n    <path fill='#eee' d=\"M0 0 L32 0 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'p' &&\n  <g>\n    <path d=\"M0 0 L16 0 L12 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L30 20 L0 28 Z\"/>\n    j\n  </g>\n  }\n  {props.children == 'q' &&\n  <g>\n    <path d=\"M0 0 L32 0 L32 40 L0 24 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L32 32 L0 32 Z\"/>\n\n\n  </g>\n  }\n  {props.children == 'r' &&\n  <g>\n    <path d=\"M0 16 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L30 20 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 's' &&\n  <g>\n    <path d=\"M0 0 L32 16 L32 32 L0 16 Z\"/>\n    <path fill='#eee' d=\"M0 0 L32 0 L32 8 L0 16 Z M0 24 L32 16 L32 32 L0 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 't' &&\n  <g>\n    <path d=\"M0 0 L32 0 L32 10 L22 10 L22 32 L10 32 L10 10 L0 10 Z\"/>\n    <path fill='#eee' d=\"M32 0 L32 10 L10 32 L10 10 Z\"/>\n\n  </g>\n  }\n  {props.children == 'u' &&\n  <g>\n    <path d=\"M0 0 L6 0 L16 32 L2 32 Z\"/>\n    <path fill='#eee' d=\"M24 0 L32 0 L30 32 L2 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'v' &&\n  <g>\n    <path d=\"M0 0 L32 0 L16 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L20 10 L16 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'w' &&\n  <g>\n    <path d=\"M0 0 L40 0 L32 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L40 0 L8 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'x' &&\n  <g>\n    <path d=\"M0 0 L32 0 L16 16 Z M0 32 L16 16 L32 32 Z\"/>\n    <path fill='#eee' d=\"M0 0 L16 0 L32 32 L16 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'y' &&\n  <g>\n    <path d=\"M0 0 L32 0 L22 12 L22 32 L10 32 L10 16 Z\"/>\n    <path fill='#eee' d=\"M10 0 L32 0 L10 32 Z\"/>\n\n  </g>\n  }\n  {props.children == 'z' &&\n  <g>\n    <path d=\"M0 0 L32 0 L32 16 L0 8 Z M0 20 L32 24 L32 32 L0 32 Z\"/>\n    <path fill='#eee' d=\"M32 0 L32 16 L0 32 L0 16 Z\"/>\n  </g>\n  }\n</Svg>\n",
+      "examples": [
+        "<Papercraft mb={2} children='a' />",
+        "<Papercraft mb={2} children='b' />",
+        "<Papercraft mb={2} children='c' />",
+        "<Papercraft mb={2} children='d' />",
+        "<Papercraft mb={2} children='e' />",
+        "<Papercraft mb={2} children='f' />",
+        "<Papercraft mb={2} children='g' />",
+        "<Papercraft mb={2} children='h' />",
+        "<Papercraft mb={2} children='i' />",
+        "<Papercraft mb={2} children='j' />",
+        "<Papercraft mb={2} children='k' />",
+        "<Papercraft mb={2} children='l' />",
+        "<Papercraft mb={2} children='m' />",
+        "<Papercraft mb={2} children='n' />",
+        "<Papercraft mb={2} children='o' />",
+        "<Papercraft mb={2} children='p' />",
+        "<Papercraft height='80' viewBox='0 0 32 40' mb={2} children='q' />",
+        "<Papercraft mb={2} children='r' />",
+        "<Papercraft mb={2} children='s' />",
+        "<Papercraft mb={2} children='t' />",
+        "<Papercraft mb={2} children='u' />",
+        "<Papercraft mb={2} children='v' />",
+        "<Papercraft mb={2} children='w' />",
+        "<Papercraft mb={2} children='x' />",
+        "<Papercraft mb={2} children='y' />",
+        "<Papercraft mb={2} children='z' />"
+      ],
+      "system": [],
+      "description": "Port of papercraft from http://jxnblk.com/papercraft/"
+    },
+    {
+      "name": "Icon",
+      "imports": [
+        "Svg",
+        "IconLink"
+      ],
+      "jsx": "<IconLink {...props}>\n  <Svg>\n  <title>{props.type}</title>\n  {props.type == 'twitter' && \n    <path d=\"M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z\"></path>\n  }\n  {props.type == 'github' && \n   <path d=\"M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12\"></path>\n  }\n  {props.type == 'snapchat' && \n    <path d=\"M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z\"></path>\n  }\n  {props.type == 'mastodon' && \n   <path d=\"M12.012 0C8.833 0 5.785 1.263 3.537 3.511c-4.697 4.667-4.719 12.257-.052 16.954 4.668 4.695 12.257 4.717 16.953.049.016-.016.033-.031.051-.049 4.684-4.682 4.684-12.273 0-16.954C18.24 1.263 15.191 0 12.012 0zm0 6.713h2.566c-.457.322-.629 1.224-.648 1.769v4.993c0 1.064-.855 1.92-1.918 1.92-1.064 0-1.919-.855-1.919-1.92V8.632c-.001-1.064.854-1.919 1.919-1.919zM12 7.96c-.37 0-.672.3-.672.672 0 .37.301.672.672.672s.671-.301.671-.672-.298-.672-.671-.672zm-6.689.19c1.063 0 1.92.854 1.92 1.918v4.942c.021.549.191 1.449.648 1.77H5.311c-1.063 0-1.918-.855-1.918-1.916v-4.795c0-1.066.855-1.919 1.918-1.919zm13.404 0c1.063 0 1.918.854 1.918 1.918v4.795c0 1.064-.855 1.918-1.918 1.918h-2.568c.457-.322.631-1.223.65-1.771v-4.942c0-1.065.853-1.918 1.918-1.918zM5.301 9.398c-.373 0-.672.3-.672.66 0 .359.299.665.66.665.359 0 .665-.3.665-.669 0-.371-.3-.673-.67-.673l.017.017zm13.426 0c-.371 0-.672.3-.672.66 0 .359.299.665.672.665.369 0 .67-.3.67-.669 0-.371-.299-.673-.67-.673v.017zm-6.727.96c-.37 0-.672.3-.672.659s.301.675.672.675.671-.3.671-.675-.298-.674-.671-.674v.015zm-6.701 1.424c-.371 0-.67.3-.67.675 0 .375.299.674.66.674.359 0 .665-.299.665-.674 0-.375-.3-.675-.67-.675h.015zm13.428 0c-.371 0-.672.3-.672.675 0 .375.299.674.672.674.369 0 .67-.299.67-.674-.001-.375-.299-.675-.67-.675zm-6.727.96c-.37 0-.672.299-.672.674s.301.674.672.674.671-.299.671-.674-.298-.674-.671-.674zm-6.701 1.44c-.371 0-.67.299-.67.664 0 .367.299.676.66.676.359 0 .665-.301.665-.676s-.3-.67-.67-.67l.015.006zm13.428 0c-.371 0-.672.299-.672.664 0 .367.299.676.672.676.369 0 .67-.301.67-.676s-.299-.67-.67-.67v.006z\"></path>\n  }\n  {props.type == 'dribbble' && \n    <path d=\"M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z\"></path>\n   }\n  {props.type == 'pinterest' && \n   <path d=\"M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z\"></path>\n  }\n  {props.type == 'instagram' && \n  <path d=\"M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z\"></path>\n  }\n    {props.type == 'instagram' && \n    <path class=\"a\" d=\"M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z\"></path>\n    }\n    {props.type == 'quora' && \n<path d=\"M12.738 18.701c-.831-1.635-1.805-3.287-3.708-3.287-.362 0-.727.061-1.059.209l-.646-1.289c.786-.678 2.058-1.214 3.693-1.214 2.544 0 3.851 1.229 4.888 2.792.613-1.335.904-3.14.904-5.375 0-5.582-1.744-8.447-5.822-8.447-4.018 0-5.757 2.865-5.757 8.447 0 5.553 1.739 8.389 5.757 8.389.64 0 1.22-.069 1.75-.225zm.996 1.947c-.881.237-1.817.366-2.743.366-5.352 0-10.59-4.269-10.59-10.478C.402 4.271 5.639 0 10.991 0c5.441 0 10.628 4.238 10.628 10.537 0 3.504-1.635 6.351-4.01 8.191.764 1.148 1.543 1.914 2.652 1.914 1.199 0 1.68-.915 1.77-1.649h1.557c.092.974-.402 5.007-4.766 5.007-2.652 0-4.047-1.528-5.096-3.328l.008-.024z\"></path>\n    }\n      {props.type == 'patreon' && \n<path d=\"M15.386.524c-4.764 0-8.64 3.876-8.64 8.64 0 4.75 3.876 8.613 8.64 8.613 4.75 0 8.614-3.864 8.614-8.613C24 4.4 20.136.524 15.386.524M.003 23.537h4.22V.524H.003\"></path>\n    }\n      {props.type == 'soundcloud' && \n<path d=\"M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c0-.057-.045-.1-.09-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.09.094s.089-.045.104-.104l.21-1.319-.21-1.334c0-.061-.044-.09-.09-.09m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.12.119.12.061 0 .105-.061.121-.12l.254-2.474-.254-2.548c-.016-.06-.061-.12-.121-.12m.945-.089c-.075 0-.135.06-.15.135l-.193 2.64.21 2.544c.016.077.075.138.149.138.075 0 .135-.061.15-.15l.24-2.532-.24-2.623c0-.075-.06-.135-.135-.135l-.031-.017zm1.155.36c-.005-.09-.075-.149-.159-.149-.09 0-.158.06-.164.149l-.217 2.43.2 2.563c0 .09.075.157.159.157.074 0 .148-.068.148-.158l.227-2.563-.227-2.444.033.015zm.809-1.709c-.101 0-.18.09-.18.181l-.21 3.957.187 2.563c0 .09.08.164.18.164.094 0 .174-.09.18-.18l.209-2.563-.209-3.972c-.008-.104-.088-.18-.18-.18m.959-.914c-.105 0-.195.09-.203.194l-.18 4.872.165 2.548c0 .12.09.209.195.209.104 0 .194-.089.21-.209l.193-2.548-.192-4.856c-.016-.12-.105-.21-.21-.21m.989-.449c-.121 0-.211.089-.225.209l-.165 5.275.165 2.52c.014.119.104.225.225.225.119 0 .225-.105.225-.225l.195-2.52-.196-5.275c0-.12-.105-.225-.225-.225m1.245.045c0-.135-.105-.24-.24-.24-.119 0-.24.105-.24.24l-.149 5.441.149 2.503c.016.135.121.24.256.24s.24-.105.24-.24l.164-2.503-.164-5.456-.016.015zm.749-.134c-.135 0-.255.119-.255.254l-.15 5.322.15 2.473c0 .15.12.255.255.255s.255-.12.255-.27l.15-2.474-.165-5.307c0-.148-.12-.27-.271-.27m1.005.166c-.164 0-.284.135-.284.285l-.103 5.143.135 2.474c0 .149.119.277.284.277.149 0 .271-.12.284-.285l.121-2.443-.135-5.112c-.012-.164-.135-.285-.285-.285m1.184-.945c-.045-.029-.105-.044-.165-.044s-.119.015-.165.044c-.09.054-.149.15-.149.255v.061l-.104 6.048.115 2.449v.008c.008.06.03.135.074.18.058.061.142.104.234.104.08 0 .158-.044.209-.09.058-.06.091-.135.091-.225l.015-.24.117-2.203-.135-6.086c0-.104-.061-.193-.135-.239l-.002-.022zm1.006-.547c-.045-.045-.09-.061-.15-.061-.074 0-.149.016-.209.061-.075.061-.119.15-.119.24v.029l-.137 6.609.076 1.215.061 1.185c0 .164.148.314.328.314.181 0 .33-.15.33-.329l.15-2.414-.15-6.637c0-.12-.074-.221-.165-.277m8.934 3.777c-.405 0-.795.086-1.139.232-.24-2.654-2.46-4.736-5.188-4.736-.659 0-1.305.135-1.889.359-.225.09-.27.18-.285.359v9.368c.016.18.15.33.33.345h8.185C22.681 17.218 24 15.914 24 14.28s-1.319-2.952-2.938-2.952\"></path>\n    }\n  {props.type == 'producthunt' && \n    <path d=\"M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm1.604 14.4h-3.405V18H7.801V6h5.804c2.319 0 4.2 1.88 4.2 4.199 0 2.321-1.881 4.201-4.201 4.201z\"></path>\n    }\n  {props.type == 'strava' && \n    <path d=\"M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169\"></path>\n  }\n  {props.type == 'stackoverflow' && \n   <path d=\"M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.936v.014zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.35 1.617-.01.001zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0h.002z\"></path>\n  }\n  {props.type == 'gratipay' && \n    <path d=\"M24 12c0 6.629-5.37 12-12 12-6.627 0-12-5.373-12-12S5.373 0 12 0c6.63 0 12 5.369 12 12zm-7.119-4.523c-1.35-.891-2.634-.216-3.306.566-.252.291-.681.635-1.492.635-.811 0-1.241-.346-1.491-.635-.66-.781-1.95-1.455-3.301-.566-1.574 1.047-1.125 2.936-.659 3.48l5.46 7.393 5.46-7.393c.464-.545.93-2.434-.661-3.48h-.01z\"></path>\n  }\n   {props.type == 'goodreads' && \n    <path d=\"M19.525 15.977V.49h-2.059v2.906h-.064c-.211-.455-.481-.891-.842-1.307-.36-.412-.767-.777-1.232-1.094-.466-.314-.962-.561-1.519-.736C13.256.09 12.669 0 12.038 0c-1.21 0-2.3.225-3.246.67-.947.447-1.743 1.057-2.385 1.83-.642.773-1.133 1.676-1.47 2.711-.336 1.037-.506 2.129-.506 3.283 0 1.199.141 2.326.425 3.382.286 1.057.737 1.976 1.368 2.762.631.78 1.412 1.397 2.375 1.833.961.436 2.119.661 3.471.661 1.248 0 2.33-.315 3.262-.946s1.638-1.473 2.119-2.525h.061v2.284c0 2.044-.421 3.607-1.264 4.705-.84 1.081-2.224 1.638-4.146 1.638-.572 0-1.128-.061-1.669-.181-.542-.12-1.036-.315-1.487-.57-.437-.271-.827-.601-1.143-1.038-.316-.435-.526-.961-.632-1.593H5.064c.067.887.315 1.654.737 2.3.424.646.961 1.172 1.602 1.593.641.406 1.367.706 2.172.902.811.194 1.639.3 2.494.3 1.383 0 2.541-.195 3.486-.555.947-.376 1.714-.902 2.301-1.608.601-.708 1.021-1.549 1.293-2.556.27-1.007.42-2.134.42-3.367l-.044.062zm-7.484-.557c-.955 0-1.784-.189-2.479-.571-.697-.38-1.277-.882-1.732-1.503-.467-.621-.797-1.332-1.022-2.139s-.332-1.633-.332-2.484c0-.871.105-1.725.301-2.563.21-.84.54-1.587.992-2.24.451-.652 1.037-1.182 1.728-1.584s1.533-.605 2.51-.605 1.803.209 2.495.621c.676.415 1.247.959 1.683 1.634.436.677.751 1.429.947 2.255.195.826.285 1.656.285 2.482 0 .852-.12 1.678-.345 2.484-.226.807-.572 1.518-1.038 2.139-.465.621-1.021 1.123-1.698 1.503-.676.382-1.458.571-2.359.571h.064z\"></path>\n  }\n   {props.type == 'spotify' && \n    <path d=\"M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z\"></path>\n  }\n   {props.type == 'slack' && \n   <g><path d=\"M9.879 10.995l1.035 3.085 3.205-1.074-1.035-3.074-3.205 1.08v-.017z\"></path><path d=\"M18.824 14.055l-1.555.521.54 1.61c.218.65-.135 1.355-.786 1.574-.15.045-.285.067-.435.063-.511-.015-.976-.338-1.155-.849l-.54-1.607-3.21 1.073.539 1.608c.211.652-.135 1.358-.794 1.575-.15.048-.285.067-.435.064-.51-.015-.976-.34-1.156-.85l-.539-1.619-1.561.524c-.15.045-.285.061-.435.061-.511-.016-.976-.345-1.155-.855-.225-.66.135-1.364.78-1.575l1.56-.525L7.5 11.76l-1.551.525c-.141.048-.285.066-.428.064-.495-.016-.975-.338-1.141-.848-.209-.65.135-1.354.796-1.574l1.56-.52-.54-1.605c-.21-.654.136-1.359.796-1.575.659-.22 1.363.136 1.574.783l.539 1.608L12.3 7.544l-.54-1.605c-.209-.645.135-1.35.789-1.574.652-.211 1.359.135 1.575.791l.54 1.621 1.555-.51c.651-.219 1.356.135 1.575.779.218.654-.135 1.359-.784 1.575l-1.557.524 1.035 3.086 1.551-.516c.652-.211 1.358.135 1.575.795.22.66-.135 1.365-.779 1.574l-.011-.029zm4.171-5.356C20.52.456 16.946-1.471 8.699 1.005.456 3.479-1.471 7.051 1.005 15.301c2.475 8.245 6.046 10.17 14.296 7.694 8.245-2.475 10.17-6.046 7.694-14.296z\"></path></g>\n  }\n   {props.type == 'vimeo' && \n    <path d=\"M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z\"></path>\n  }\n    {props.type == 'linkedin' && \n    <path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"></path>\n  }\n    {props.type == 'facebook' && \n  <path d=\"M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0\"></path>\n  }\n  {props.type == 'pinboard' && \n    <path d=\"M13.352 14.585l-4.509 4.614.72-4.062L3.428 7.57 0 7.753 7.58 0v2.953l7.214 6.646 4.513-1.105-4.689 4.982L24 24l-10.648-9.415z\"></path>\n  }\n    {props.type == 'medium' && \n    <path d=\"M2.846 6.36c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403H7.26l5.378 11.795 4.728-11.795H24v.403l-1.917 1.837c-.165.126-.247.333-.213.538v13.5c-.034.204.048.41.213.537l1.87 1.837v.403h-9.41v-.403l1.937-1.882c.19-.19.19-.246.19-.538V7.794l-5.39 13.688h-.727L4.278 7.794v9.174c-.052.386.076.774.347 1.053l2.52 3.06v.402H0v-.403l2.52-3.06c.27-.278.39-.67.326-1.052V6.36z\"></path>\n  }\n    {props.type == 'codepen' && \n  <path d=\"M24 8.182l-.018-.087-.017-.05c-.01-.024-.018-.05-.03-.075-.003-.018-.015-.034-.02-.05l-.035-.067-.03-.05-.044-.06-.046-.045-.06-.045-.046-.03-.06-.044-.044-.04-.015-.02L12.58.19c-.347-.232-.796-.232-1.142 0L.453 7.502l-.015.015-.044.035-.06.05-.038.04-.05.056-.037.045-.05.06c-.02.017-.03.03-.03.046l-.05.06-.02.06c-.02.01-.02.04-.03.07l-.01.05C0 8.12 0 8.15 0 8.18v7.497c0 .044.003.09.01.135l.01.046c.005.03.01.06.02.086l.015.05c.01.027.016.053.027.075l.022.05c0 .01.015.04.03.06l.03.04c.015.01.03.04.045.06l.03.04.04.04c.01.013.01.03.03.03l.06.042.04.03.01.014 10.97 7.33c.164.12.375.163.57.163s.39-.06.57-.18l10.99-7.28.014-.01.046-.037.06-.043.048-.036.052-.058.033-.045.04-.06.03-.05.03-.07.016-.052.03-.077.015-.045.03-.08v-7.5c0-.05 0-.095-.016-.14l-.014-.045.044.003zm-11.99 6.28l-3.65-2.44 3.65-2.442 3.65 2.44-3.65 2.44zm-1.034-6.674l-4.473 2.99L2.89 8.362l8.086-5.39V7.79zm-6.33 4.233l-2.582 1.73V10.3l2.582 1.726zm1.857 1.25l4.473 2.99v4.82L2.89 15.69l3.618-2.417v-.004zm6.537 2.99l4.474-2.98 3.613 2.42-8.087 5.39v-4.82zm6.33-4.23l2.583-1.72v3.456l-2.583-1.73zm-1.855-1.24L13.042 7.8V2.97l8.085 5.39-3.612 2.415v.003z\"></path>\n  }\n    {props.type == 'pinboard' && \n    <path d=\"M13.352 14.585l-4.509 4.614.72-4.062L3.428 7.57 0 7.753 7.58 0v2.953l7.214 6.646 4.513-1.105-4.689 4.982L24 24l-10.648-9.415z\"></path>\n  }\n  </Svg>\n  \n</IconLink>\n",
+      "examples": [
+        "<Icon type='twitter' />"
+      ],
+      "system": []
+    },
+    {
+      "name": "Button",
+      "type": "button",
+      "props": {
+        "fontSize": 1,
+        "px": 2,
+        "py": 1,
+        "color": "white",
+        "bg": "blue",
+        "borderRadius": 22
+      },
+      "style": {
+        "display": "inline-block",
+        "fontFamily": "inherit",
+        "borderWidth": 0,
+        "borderRadius": "4px",
+        "appearance": "none"
+      },
+      "examples": [
+        "<Button>Hello</Button>",
+        "<Button>Hello there, how are you?</Button>"
+      ],
+      "system": [
+        "borderRadius"
+      ]
+    },
+    {
+      "name": "BigButton",
+      "type": "Button",
+      "props": {
+        "fontSize": 3,
+        "px": 4,
+        "py": 3,
+        "color": "white",
+        "bg": "blue"
+      },
+      "style": {},
+      "examples": [
+        "<BigButton>BigButton</BigButton>"
+      ],
+      "system": []
+    },
+    {
+      "name": "CardComposite",
+      "imports": [
+        "Button",
+        "Image",
+        "CardText",
+        "Container"
+      ],
+      "jsx": "<Container>\n<Image src={props.image} />\n<CardText>{props.title}</CardText>\n</Container>",
+      "examples": [
+        "<CardComposite />"
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "i": "0",
+      "name": "Image",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 42,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "1",
+      "name": "NavLink",
+      "w": 1,
+      "h": 3,
+      "x": 7,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "2",
+      "name": "TextLink",
+      "w": 3,
+      "h": 2,
+      "x": 6,
+      "y": 43,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "3",
+      "name": "BlockLink",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 23,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "4",
+      "name": "Avatar",
+      "w": 1,
+      "h": 3,
+      "x": 6,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "5",
+      "name": "PageTitle",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 40,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "6",
+      "name": "PageSubtitle",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 42,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "7",
+      "name": "Card",
+      "w": 3,
+      "h": 13,
+      "x": 0,
+      "y": 7,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "8",
+      "name": "CardImage",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 34,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "9",
+      "name": "CardTitle",
+      "w": 3,
+      "h": 2,
+      "x": 0,
+      "y": 26,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "10",
+      "name": "CardSubtitle",
+      "w": 3,
+      "h": 2,
+      "x": 0,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "11",
+      "name": "CardText",
+      "w": 3,
+      "h": 3,
+      "x": 0,
+      "y": 28,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "12",
+      "name": "CardKicker",
+      "w": 3,
+      "h": 2,
+      "x": 0,
+      "y": 22,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "13",
+      "name": "CardLink",
+      "w": 3,
+      "h": 2,
+      "x": 0,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "14",
+      "name": "Container",
+      "w": 3,
+      "h": 3,
+      "x": 6,
+      "y": 45,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "15",
+      "name": "Box",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 54,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "16",
+      "name": "Svg",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 49,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "17",
+      "name": "TwitterIcon",
+      "w": 1,
+      "h": 2,
+      "x": 3,
+      "y": 26,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "18",
+      "name": "GitHubIcon",
+      "w": 1,
+      "h": 2,
+      "x": 4,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "19",
+      "name": "FacebookIcon",
+      "w": 1,
+      "h": 2,
+      "x": 4,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "20",
+      "name": "DribbbleIcon",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "21",
+      "name": "InstagramIcon",
+      "w": 1,
+      "h": 2,
+      "x": 4,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "22",
+      "name": "PinterestIcon",
+      "w": 1,
+      "h": 2,
+      "x": 4,
+      "y": 18,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "23",
+      "name": "YoutubeIcon",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "24",
+      "name": "CodepenIcon",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 18,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "25",
+      "name": "VimeoIcon",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "26",
+      "name": "IconLink",
+      "w": 3,
+      "h": 2,
+      "x": 6,
+      "y": 52,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "27",
+      "name": "Panel",
+      "w": 6,
+      "h": 11,
+      "x": 6,
+      "y": 3,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "28",
+      "name": "PanelAlt",
+      "w": 6,
+      "h": 12,
+      "x": 6,
+      "y": 31,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "29",
+      "name": "PanelTitle",
+      "w": 3,
+      "h": 2,
+      "x": 6,
+      "y": 21,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "30",
+      "name": "PanelSubtitle",
+      "w": 3,
+      "h": 2,
+      "x": 6,
+      "y": 23,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "31",
+      "name": "PanelText",
+      "w": 2,
+      "h": 2,
+      "x": 7,
+      "y": 25,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "32",
+      "name": "PanelImage",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 38,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "33",
+      "name": "PanelLink",
+      "w": 1,
+      "h": 2,
+      "x": 6,
+      "y": 25,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "34",
+      "name": "Flexbox",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 48,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "35",
+      "name": "Text",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 47,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "36",
+      "name": "SectionTitle",
+      "w": 3,
+      "h": 3,
+      "x": 9,
+      "y": 51,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "37",
+      "name": "Div",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 21,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "38",
+      "name": "Caps",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 25,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "39",
+      "name": "Capitalize",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 27,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "40",
+      "name": "PageBG",
+      "w": 3,
+      "h": 3,
+      "x": 0,
+      "y": 31,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "41",
+      "name": "Center",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 29,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "42",
+      "name": "SiteHeader",
+      "w": 6,
+      "h": 3,
+      "x": 0,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "43",
+      "name": "HorizontalRule",
+      "w": 4,
+      "h": 3,
+      "x": 8,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "44",
+      "name": "TileLink",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 36,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "45",
+      "name": "TileTitle",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 30,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "46",
+      "name": "TileSubtitle",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 32,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "47",
+      "name": "TileKicker",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 34,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "48",
+      "name": "TileText",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 38,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "49",
+      "name": "TileImage",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 28,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "50",
+      "name": "Tile",
+      "w": 3,
+      "h": 7,
+      "x": 3,
+      "y": 3,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "51",
+      "name": "Meta",
+      "w": 3,
+      "h": 2,
+      "x": 9,
+      "y": 45,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "52",
+      "name": "PanelKicker",
+      "w": 3,
+      "h": 2,
+      "x": 6,
+      "y": 27,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "53",
+      "name": "List",
+      "w": 1,
+      "h": 2,
+      "x": 9,
+      "y": 43,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "54",
+      "name": "ListItem",
+      "w": 1,
+      "h": 2,
+      "x": 10,
+      "y": 43,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "55",
+      "name": "ListItemLink",
+      "w": 1,
+      "h": 2,
+      "x": 11,
+      "y": 43,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "56",
+      "name": "SnapchatIcon",
+      "w": 1,
+      "h": 2,
+      "x": 4,
+      "y": 22,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "57",
+      "name": "LinkedinIcon",
+      "w": 1,
+      "h": 2,
+      "x": 3,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "58",
+      "name": "BehanceIcon",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 22,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "59",
+      "name": "SlackIcon",
+      "w": 1,
+      "h": 2,
+      "x": 3,
+      "y": 18,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "60",
+      "name": "KickstarterIcon",
+      "w": 1,
+      "h": 2,
+      "x": 3,
+      "y": 22,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "61",
+      "name": "StackoverflowIcon",
+      "w": 1,
+      "h": 2,
+      "x": 5,
+      "y": 26,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "62",
+      "name": "EtsyIcon",
+      "w": 1,
+      "h": 2,
+      "x": 3,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "63",
+      "name": "ProducthuntIcon",
+      "w": 1,
+      "h": 2,
+      "x": 3,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "64",
+      "name": "NpmIcon",
+      "w": 1,
+      "h": 2,
+      "x": 4,
+      "y": 26,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "65",
+      "name": "SoundcloudIcon",
+      "w": 3,
+      "h": 2,
+      "x": 3,
+      "y": 14,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "66",
+      "name": "Papercraft",
+      "w": 6,
+      "h": 3,
+      "x": 6,
+      "y": 18,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "67",
+      "name": "Icon",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 14,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "68",
+      "name": "Button",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 3,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "69",
+      "name": "BigButton",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 10,
+      "moved": false,
+      "static": false
+    },
+    {
+      "i": "70",
+      "name": "CardComposite",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 8
+    }
+  ]
+}
